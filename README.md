@@ -1,4 +1,4 @@
-# lein-git-commit-id
+# lein-git-info
 
 A Leiningen plugin to do many wonderful things.
 
@@ -6,16 +6,16 @@ A Leiningen plugin to do many wonderful things.
 
 FIXME: Use this for user-level plugins:
 
-Put `[lein-git-commit-id "0.1.0-SNAPSHOT"]` into the `:plugins` vector of your `:user`
+Put `[lein-git-info "0.1.0-SNAPSHOT"]` into the `:plugins` vector of your `:user`
 profile.
 
 FIXME: Use this for project-level plugins:
 
-Put `[lein-git-commit-id "0.1.0-SNAPSHOT"]` into the `:plugins` vector of your project.clj.
+Put `[lein-git-info "0.1.0-SNAPSHOT"]` into the `:plugins` vector of your project.clj.
 
 FIXME: and add an example usage that actually makes sense:
 
-    $ lein git-commit-id
+    $ lein git-info
 
 ## License
 
