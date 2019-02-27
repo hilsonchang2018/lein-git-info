@@ -2,7 +2,7 @@
 
 build | status
 ----- | -----
-Latest Build | [![CircleCI](https://circleci.com/gh/hilsonchang2018/lein-git-info.svg?style=svg&circle-token=e3805d10dcb2507eaa2e281250032063acafa30a](https://circleci.com/gh/hilsonchang2018/lein-git-info)
+Latest Build | [![CircleCI](https://circleci.com/gh/hilsonchang2018/lein-git-info.svg?style=svg&circle-token=e3805d10dcb2507eaa2e281250032063acafa30a)](https://circleci.com/gh/hilsonchang2018/lein-git-info)
 master branch | [![CircleCI](https://circleci.com/gh/hilsonchang2018/lein-git-info/tree/master.svg?style=svg&circle-token=e3805d10dcb2507eaa2e281250032063acafa30a)](https://circleci.com/gh/hilsonchang2018/lein-git-info/tree/master)
 
 A Leiningen plugin to do many wonderful things.
