@@ -1,19 +1,24 @@
 # lein-git-info
 
+build | status
+----- | -----
+Latest Build | [![CircleCI](https://circleci.com/gh/hilsonchang2018/lein-git-info.svg?style=svg&circle-token=e3805d10dcb2507eaa2e281250032063acafa30a](https://circleci.com/gh/hilsonchang2018/lein-git-info)
+master branch | [![CircleCI](https://circleci.com/gh/hilsonchang2018/lein-git-info/tree/master.svg?style=svg&circle-token=e3805d10dcb2507eaa2e281250032063acafa30a)](https://circleci.com/gh/hilsonchang2018/lein-git-info/tree/master)
+
 A Leiningen plugin to do many wonderful things.
 
 ## Usage
 
-FIXME: Use this for user-level plugins:
+Use this for user-level plugins:
 
-Put `[lein-git-info "0.1.0-SNAPSHOT"]` into the `:plugins` vector of your `:user`
+Put `[org.clojars.hilsonchang/lein-git-info "0.1.0-SNAPSHOT"]` into the `:plugins` vector of your `:user`
 profile.
 
-FIXME: Use this for project-level plugins:
+Use this for project-level plugins:
 
-Put `[lein-git-info "0.1.0-SNAPSHOT"]` into the `:plugins` vector of your project.clj.
+Put `[org.clojars.hilsonchang/lein-git-info "0.1.0-SNAPSHOT"]` into the `:plugins` vector of your project.clj.
 
-FIXME: and add an example usage that actually makes sense:
+and add an example usage that actually makes sense:
 
     $ lein git-info
 
