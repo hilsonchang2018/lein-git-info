@@ -11,12 +11,12 @@ A Leiningen plugin to do many wonderful things.
 
 Use this for user-level plugins:
 
-Put `[org.clojars.hilsonchang/lein-git-info "0.1.0-SNAPSHOT"]` into the `:plugins` vector of your `:user`
+Put `[org.clojars.hilsonchang/lein-git-info "0.1.0"]` into the `:plugins` vector of your `:user`
 profile.
 
 Use this for project-level plugins:
 
-Put `[org.clojars.hilsonchang/lein-git-info "0.1.0-SNAPSHOT"]` into the `:plugins` vector of your project.clj.
+Put `[org.clojars.hilsonchang/lein-git-info "0.1.0"]` into the `:plugins` vector of your project.clj.
 
 and add an example usage that actually makes sense:
 
