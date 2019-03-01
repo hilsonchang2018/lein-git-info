@@ -1,0 +1,4 @@
+Git:
+lein-git-info:
+feature/hilson-issue1-add-lein-install-for-checkouts-projectsc36646c
+

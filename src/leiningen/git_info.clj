@@ -1,5 +1,4 @@
-(ns leiningen.git-info
-  (:require [clojure.string :refer [trim-newline]]
+(ns leiningen.git-info (:require [clojure.string :refer [trim-newline]]
             [clojure.java.shell :refer [sh]]
             [clojure.java.io :refer [as-file]]
             [leiningen.core.project :as project])
@@ -64,8 +63,8 @@
 
 
 (defn perform-lein-task [task-name, project]
+  (println "lein" (if (string? task-name) task-name (join " " (seq task-name))))
   (apply-task task-name (:data project) []))
-
 
 (defn new-version-file []
   (-> VER-FILE as-file .getParent as-file .mkdirs)
@@ -73,22 +72,30 @@
   (-> VER-FILE (spit "Git:\n")))
 
 (defn project-git-info [proj]
-  (println (format "Processing project \"%s\"" (:name proj)))
+  (println (format "\nProcess project \"%s\":" (:name proj)))
   (let [git-dir (str "--git-dir=" (.getAbsolutePath (:dir proj)) "/.git")
-        branch (:out (sh "git" git-dir "rev-parse" "--abbrev-ref" "HEAD"))
-        commit-id (:out (sh "git" git-dir "rev-parse" "--short" "HEAD"))
+        branch (trim-newline (:out (sh "git" git-dir "rev-parse" "--abbrev-ref" "HEAD")))
+        commit-id (trim-newline (:out (sh "git" git-dir "rev-parse" "--short" "HEAD")))
         ]
-    (-> VER-FILE (spit (str (:name proj) ":\n" branch commit-id "\n") :append true))))
+    (println (format "git: \"%s\" \"%s\"" branch commit-id))
+    (-> VER-FILE (spit (str (:name proj) ":\n" branch "\n" commit-id "\n\n") :append true))))
 
-(defn all-git-info [build-seq]
+(defn git-infos [build-seq args]
   (new-version-file)
-  (doseq [p (butlast build-seq)] (project-git-info p))
-  (project-git-info (last build-seq)))
+  (doseq [p (butlast build-seq)]
+    (project-git-info p)
+    (perform-lein-task "clean" p)
+    (perform-lein-task "install" p))
+  (let [p (last build-seq)]
+    (project-git-info p)
+    (perform-lein-task "clean" p)
+    (when args (do (perform-lein-task args p)
+                   (-> VER-FILE as-file .delete)))))
 
 (defn git-info
   "Write git info to version file include all linked projects in \"checkouts\"."
   [project & args]
   (if project
-    (-> project get-checkouts-map create-checkout-build-seq all-git-info)
+    (-> project get-checkouts-map create-checkout-build-seq (git-infos args))
     (error "No project specified!")))
 

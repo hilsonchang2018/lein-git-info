@@ -1,4 +1,4 @@
-(defproject org.clojars.hilsonchang/lein-git-info "0.1.0"
+(defproject lein-git-info "0.1.2"
   :description "Generate projects git information to version file"
   :url "https://github.com/hilsonchang2018/lein-git-info"
   :license {:name "Eclipse Public License"
