@@ -1,6 +1,7 @@
 # lein-git-info
 
 [![Clojars Project](https://img.shields.io/clojars/v/lein-git-info.svg)](https://clojars.org/lein-git-info)
+[![CHANGELOG.md](https://img.shields.io/badge/-changelog-blue.svg)](CHANGELOG.md)
 
 build | status
 ----- | -----
@@ -9,16 +10,9 @@ master branch | [![CircleCI](https://circleci.com/gh/hilsonchang2018/lein-git-in
 
 ## Usage
 
-Use this for user-level plugins:
+Add this into the `:plugins` vector of your `:user` profile , or  `:plugins` vector of your project.clj.
 
-`[lein-git-info "0.1.2"]` into the `:plugins` vector of your `:user`
-profile.
-
-Use this for project-level plugins:
-
-`[lein-git-info "0.1.2"]` into the `:plugins` vector of your project.clj.
-
-and add an example usage that actually makes sense:
+![https://clojars.org/lein-git-info](https://clojars.org/lein-git-info/latest-version.svg)
 
     $ lein git-info                    ;lein clean & lein install all "checkouts" projects & generate resources/verison.txt in this project.
     $ lein git-info install
