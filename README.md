@@ -1,7 +1,13 @@
 # lein-git-info
 
-[![Clojars Project](https://img.shields.io/clojars/v/lein-git-info.svg)](https://clojars.org/lein-git-info)
+![Clojars Project](https://img.shields.io/clojars/v/lein-git-info.svg)
+![download](https://img.shields.io/clojars/dt/lein-git-info.svg)
+
 [![CHANGELOG.md](https://img.shields.io/badge/-changelog-blue.svg)](CHANGELOG.md)
+![coveralls](https://img.shields.io/coveralls/github/hilsonchang2018/lein-git-info/master.svg)
+![license](https://img.shields.io/github/license/hilsonchang2018/lein-git-info.svg)
+![stars](https://img.shields.io/github/stars/hilsonchang2018/lein-git-info.svg?style=social)
+![tag](https://img.shields.io/github/tag/hilsonchang2018/lein-git-info.svg)
 
 build | status
 ----- | -----
