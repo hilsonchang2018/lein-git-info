@@ -1,6 +1,14 @@
 # lein-git-info
 
-[![Clojars Project](https://img.shields.io/clojars/v/lein-git-info.svg)](https://clojars.org/lein-git-info)
+![Clojars Project](https://img.shields.io/clojars/v/lein-git-info.svg)
+![download](https://img.shields.io/clojars/dt/lein-git-info.svg)
+![stars](https://img.shields.io/github/stars/hilsonchang2018/lein-git-info.svg?style=social)
+[![CHANGELOG.md](https://img.shields.io/badge/-changelog-blue.svg)](CHANGELOG.md)
+
+![code-size](https://img.shields.io/github/languages/code-size/hilsonchang2018/lein-git-info.svg)
+![coveralls](https://img.shields.io/coveralls/github/hilsonchang2018/lein-git-info.svg)
+![license](https://img.shields.io/github/license/hilsonchang2018/lein-git-info.svg)
+![tag](https://img.shields.io/github/tag/hilsonchang2018/lein-git-info.svg)
 
 build | status
 ----- | -----
@@ -9,16 +17,9 @@ master branch | [![CircleCI](https://circleci.com/gh/hilsonchang2018/lein-git-in
 
 ## Usage
 
-Use this for user-level plugins:
+Add this into the `:plugins` vector of your `:user` profile , or  `:plugins` vector of your project.clj.
 
-`[lein-git-info "0.1.2"]` into the `:plugins` vector of your `:user`
-profile.
-
-Use this for project-level plugins:
-
-`[lein-git-info "0.1.2"]` into the `:plugins` vector of your project.clj.
-
-and add an example usage that actually makes sense:
+![https://clojars.org/lein-git-info](https://clojars.org/lein-git-info/latest-version.svg)
 
     $ lein git-info                    ;lein clean & lein install all "checkouts" projects & generate resources/verison.txt in this project.
     $ lein git-info install
