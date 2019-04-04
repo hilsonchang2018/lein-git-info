@@ -1,13 +1,3 @@
-version: 2
-jobs:
-  build:
-    docker:
-      - image: circleci/clojure:lein-2.8.1
-
-    steps:
-      - checkout
-
-      - run: lein deps
 
 # Clojure CircleCI 2.0 configuration file
 #
@@ -30,7 +20,7 @@ jobs:
     environment:
       LEIN_ROOT: "true"
       # Customize the JVM maximum heap limit
-      JVM_OPTS: -Xmx3200m
+      JVM_OPTS: -Xmx1024m
 
     steps:
       - checkout
@@ -50,4 +40,5 @@ jobs:
           key: v1-dependencies-{{ checksum "project.clj" }}
 
       # run tests!
-            - run: lein cloverage --coveralls --runner :midje
+      - run: lein cloverage --codecov --runner :midje
+      - run: bash <(curl -s https://codecov.io/bash) -f target/coverage/codecov.json
