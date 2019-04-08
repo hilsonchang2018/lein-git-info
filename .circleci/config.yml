@@ -5,10 +5,10 @@
 #
 version: 2
 jobs:
-  build:
+  test-project:
     docker:
       # specify the version you desire here
-      - image: circleci/clojure:lein-2.7.1
+      - image: clojure:lein-2.7.1
 
       # Specify service dependencies here if necessary
       # CircleCI maintains a library of pre-built images
@@ -52,3 +52,9 @@ jobs:
 
       - store_artifacts:
           path: target/coverage
+
+workflows:
+  version: 2
+  run_all_tests:
+    jobs:
+      - test-project
