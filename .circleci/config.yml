@@ -39,7 +39,7 @@ jobs:
       # run tests!
       - run:
         name: code cover test
-        command: lein cloverage --codecov --runner :midje
+        command: lein cloverage --codecov
 
       - run:
         name: codecov report
