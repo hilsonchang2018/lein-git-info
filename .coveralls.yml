@@ -1,0 +1,3 @@
+service_name: circle-ci
+json_path: target/coverage/coveralls.json
+repo_token: 53BzSugRjH5Fdf2097dBZaXHsPlIIe3nc
