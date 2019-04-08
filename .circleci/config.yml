@@ -32,10 +32,13 @@ jobs:
           # fallback to using the latest cache if no exact match is found
           - v1-dependencies-
 
-            #- run: lein test
+      - run: lein deps
 
       # run tests!
-      - run: lein cloverage --codecov --runner :midje
+      - run:
+        name: code cover test
+        command: lein cloverage --codecov --runner :midje
+        when: on_success
       #- run: bash <(curl -s https://codecov.io/bash) -f target/coverage/codecov.json
 
       - save_cache:
