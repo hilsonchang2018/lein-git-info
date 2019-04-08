@@ -20,7 +20,7 @@ jobs:
     environment:
       LEIN_ROOT: "true"
       # Customize the JVM maximum heap limit
-      JVM_OPTS: -Xmx1024m
+      JVM_OPTS: -Xmx2048m
 
     steps:
       - checkout
@@ -32,17 +32,23 @@ jobs:
           # fallback to using the latest cache if no exact match is found
           - v1-dependencies-
 
-      - run: lein deps
+      - run:
+        name: download dependencies
+        command: lein deps
 
       # run tests!
       - run:
         name: code cover test
         command: lein cloverage --codecov --runner :midje
-        when: on_success
-      #- run: bash <(curl -s https://codecov.io/bash) -f target/coverage/codecov.json
+
+      - run:
+        name: codecov report
+        command: bash <(curl -s https://codecov.io/bash) -f target/coverage/codecov.json
 
       - save_cache:
           paths:
             - ~/.m2
           key: v1-dependencies-{{ checksum "project.clj" }}
 
+      - store_artifacts:
+          path: target/coverage
