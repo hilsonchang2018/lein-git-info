@@ -7,5 +7,6 @@
                                      :username :gpg :password :gpg }]
                         ["snapshots" {:url "https://repo.clojars.org"
                                       :username :gpg :password :gpg}]]
-  :plugins [[lein-cloverage "1.1.1"]]
+  :plugins [[lein-midje "3.2.1"]
+            [lein-cloverage "1.0.11"]]
   :eval-in-leiningen true)
