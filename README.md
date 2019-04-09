@@ -9,6 +9,7 @@
 
 [![codecov](https://codecov.io/gh/hilsonchang2018/lein-git-info/branch/master/graph/badge.svg)](https://codecov.io/gh/hilsonchang2018/lein-git-info)
 [![Coverage Status](https://coveralls.io/repos/github/hilsonchang2018/lein-git-info/badge.svg)](https://coveralls.io/github/hilsonchang2018/lein-git-info)
+
 build | status
 ----- | -----
 Latest Build | [![CircleCI](https://circleci.com/gh/hilsonchang2018/lein-git-info.svg?style=svg&circle-token=e3805d10dcb2507eaa2e281250032063acafa30a)](https://circleci.com/gh/hilsonchang2018/lein-git-info)
