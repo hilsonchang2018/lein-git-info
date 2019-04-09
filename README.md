@@ -6,7 +6,7 @@
 [![CHANGELOG.md](https://img.shields.io/badge/-changelog-blue.svg)](CHANGELOG.md)
 ![code-size](https://img.shields.io/github/languages/code-size/hilsonchang2018/lein-git-info.svg)
 ![license](https://img.shields.io/github/license/hilsonchang2018/lein-git-info.svg)
-
+[![codecov](https://codecov.io/gh/hilsonchang2018/lein-git-info/branch/master/graph/badge.svg)](https://codecov.io/gh/hilsonchang2018/lein-git-info)
 
 build | status
 ----- | -----
