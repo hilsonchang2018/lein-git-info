@@ -7,6 +7,12 @@
                                      :username :gpg :password :gpg }]
                         ["snapshots" {:url "https://repo.clojars.org"
                                       :username :gpg :password :gpg}]]
-  :plugins [[lein-midje "3.2.1"]
-            [lein-cloverage "1.0.11"]]
+  :dependencies [[org.clojure/clojure "1.8.0"]
+                 ]
+  :profiles {:dev {:dependencies [[midje "1.9.2"]
+                                  [midje-notifier "0.2.0"]
+                                  ]
+                   :plugins [[lein-midje "3.2.1"]
+                             [lein-cloverage "1.0.11"]]
+                   }}
   :eval-in-leiningen true)
