@@ -4,12 +4,9 @@
 ![download](https://img.shields.io/clojars/dt/lein-git-info.svg)
 ![stars](https://img.shields.io/github/stars/hilsonchang2018/lein-git-info.svg?style=social)
 [![CHANGELOG.md](https://img.shields.io/badge/-changelog-blue.svg)](CHANGELOG.md)
-
 ![code-size](https://img.shields.io/github/languages/code-size/hilsonchang2018/lein-git-info.svg)
-![coveralls](https://img.shields.io/coveralls/github/hilsonchang2018/lein-git-info.svg)
-[![Coverage Status](https://coveralls.io/repos/github/hilsonchang2018/lein-git-info/badge.svg?branch=master)](https://coveralls.io/github/hilsonchang2018/lein-git-info?branch=master)
 ![license](https://img.shields.io/github/license/hilsonchang2018/lein-git-info.svg)
-![tag](https://img.shields.io/github/tag/hilsonchang2018/lein-git-info.svg)
+
 
 build | status
 ----- | -----
